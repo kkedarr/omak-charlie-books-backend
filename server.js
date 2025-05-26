@@ -40,6 +40,8 @@ app.post("/api/subscribe", async (req, res) => {
     });
 
     const result = await response.json();
+    console.log("Mailchimp response:", result); // Add this line
+
 
     if (response.status === 200 || response.status === 201) {
       return res.json({ message: "Subscription successful!" });
